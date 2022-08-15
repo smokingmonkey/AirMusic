@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://learningmusic.ableton.com/ -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Explore the fundamentals of music via Ableton&#39;s interactive website. Experiment with beats, melody, harmony, basslines, and song structure in your web browser.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://learningmusic.ableton.com/images/og-image.jpg">
+
+  <meta property="ix:host" content="ableton-learningmusic.imgix.net">
+  <meta property="ix:useHttps" content="true">
+
+  <title> Get started | Learning Music (Beta)</title>
+
+  <link rel="stylesheet" href="./Get started _ Learning Music (Beta)_files/main.css">
+  <link rel="shortcut icon" type="image/ico" href="https://learningmusic.ableton.com/images/favicon.ico">
+  <link rel="manifest" href="https://learningmusic.ableton.com/manifest.json">
+
+  <script type="text/javascript" src="./Get started _ Learning Music (Beta)_files/polyfills.js.descarga"></script>
+  <script type="text/javascript" src="./Get started _ Learning Music (Beta)_files/tone.min.js.descarga"></script>
+  <script type="text/javascript" src="./Get started _ Learning Music (Beta)_files/microevent.js.descarga"></script>
+  <script type="text/javascript" src="./Get started _ Learning Music (Beta)_files/imgix.min.js.descarga"></script>
+  <script type="text/javascript" src="./Get started _ Learning Music (Beta)_files/widgets.min.js.descarga"></script>
+
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+        }, function (err) {
+        });
+      });
+    }
+  </script>
+</head>
+<body class="lang-- bg--base color--inverted has-nav ltr nav-is-hidden nav-is-initialized" dir="ltr" onload="">
+<noscript>
+  <div class="pt2 pb2 bg--salmon text--white">
+    <center><strong>Please enable JavaScript in order to use this site.</strong></center>
+  </div>
+</noscript>
+
+<script type="text/javascript">
+  function onLoad()
+  {
+    ANIMATION_FRAMER = new AnimationFramer();
+    ANIMATION_FRAMER.init();
+
+    SUPERVISOR = new AudioSupervisor();
+    SUPERVISOR.init();
+
+    EXPORTER = new LiveSetExporter();
+    EXPORTER.init();
+
+    KEY_SUPERVISOR = new KeySupervisor();
+    KEY_SUPERVISOR.init();
+
+    METRONOME = new Metronome();
+    METRONOME.init();
+
+    LOCALE = '';
+    LOCALE_PATH = '';
+  }
+
+  onLoad();
+
+  document.addEventListener("DOMContentLoaded", function (event) {
+    var widgets = document.getElementsByClassName("widget");
+    var widgetIds = {};
+    for (var i = 0; i < widgets.length; i++) {
+      var id = widgets[i].id;
+      if (widgetIds[id]) {
+        throw "Duplicate widget id: " + id;
+      }
+      widgetIds[id] = true;
+    }
+  });
+</script>
+<div class="container mx-auto">
+  <header class="main-header">
+    <div class="ribbon ribbon--rigid medium">
+      <div class="ribbon__element main-header__title">
+        Get started
+      </div>
+      <div class="ribbon__element main-header__logo">
+        <a href="https://www.ableton.com/">
+          <svg class="main-header__logo__icon" width="60px" height="28px" viewBox="0 0 60 28" version="1.1"
+               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g fill-rule="nonzero" fill="#FFFFFF">
+              <rect id="Rectangle-path" x="0" y="0" width="4" height="28"></rect>
+              <rect id="Rectangle-path" x="8" y="0" width="4" height="28"></rect>
+              <rect id="Rectangle-path" x="16" y="0" width="4" height="28"></rect>
+              <rect id="Rectangle-path" x="24" y="0" width="4" height="28"></rect>
+              <rect id="Rectangle-path" x="32" y="24" width="28" height="4"></rect>
+              <rect id="Rectangle-path" x="32" y="16" width="28" height="4"></rect>
+              <rect id="Rectangle-path" x="32" y="8" width="28" height="4"></rect>
+              <rect id="Rectangle-path" x="32" y="0" width="28" height="4"></rect>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </header>
+</div>
+
+<div class="container container--max-width mx-auto">
+  <div class="body-text text-container limit-line-length-inside">
+
+    <div class="widget session" id="_getstartedcombining1" dir="ltr"
+         data-preset="{&quot;name&quot;:&quot;Session 1&quot;,&quot;tempo&quot;:102,&quot;tracks&quot;:[{&quot;@name&quot;:&quot;Drums&quot;,&quot;theme&quot;:&quot;theme-a&quot;,&quot;clips&quot;:[{&quot;name&quot;:&quot;Drums 1&quot;,&quot;path&quot;:&quot;simplesession/Drums1&quot;,&quot;length&quot;:&quot;1m&quot;},{&quot;name&quot;:&quot;Drums 2&quot;,&quot;path&quot;:&quot;simplesession/Drums2&quot;,&quot;length&quot;:&quot;1m&quot;},{&quot;name&quot;:&quot;Drums 3&quot;,&quot;path&quot;:&quot;simplesession/Drums3&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Drums 4&quot;,&quot;path&quot;:&quot;simplesession/Drums4&quot;,&quot;length&quot;:&quot;1m&quot;}]},{&quot;@name&quot;:&quot;Bass&quot;,&quot;theme&quot;:&quot;theme-d&quot;,&quot;clips&quot;:[{&quot;name&quot;:&quot;Bass 1&quot;,&quot;path&quot;:&quot;simplesession/Bass1&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Bass 2&quot;,&quot;path&quot;:&quot;simplesession/Bass2&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Bass 3&quot;,&quot;path&quot;:&quot;simplesession/Bass3&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Bass 4&quot;,&quot;path&quot;:&quot;simplesession/Bass4&quot;,&quot;length&quot;:&quot;2m&quot;}]},{&quot;@name&quot;:&quot;Chords&quot;,&quot;theme&quot;:&quot;theme-c&quot;,&quot;clips&quot;:[{&quot;name&quot;:&quot;Chords 1&quot;,&quot;path&quot;:&quot;simplesession/Chords1&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Chords 2&quot;,&quot;path&quot;:&quot;simplesession/Chords2&quot;,&quot;length&quot;:&quot;1m&quot;},{&quot;name&quot;:&quot;Chords 3&quot;,&quot;path&quot;:&quot;simplesession/Chords3&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Chords 4&quot;,&quot;path&quot;:&quot;simplesession/Chords4&quot;,&quot;length&quot;:&quot;2m&quot;}]},{&quot;@name&quot;:&quot;Melodies&quot;,&quot;theme&quot;:&quot;theme-e&quot;,&quot;clips&quot;:[{&quot;name&quot;:&quot;Melodies 1&quot;,&quot;path&quot;:&quot;simplesession/Melodies1&quot;,&quot;length&quot;:&quot;2m&quot;},{&quot;name&quot;:&quot;Melodies 2&quot;,&quot;path&quot;:&quot;simplesession/Melodies2&quot;,&quot;length&quot;:&quot;4m&quot;},{&quot;name&quot;:&quot;Melodies 3&quot;,&quot;path&quot;:&quot;simplesession/Melodies3&quot;,&quot;length&quot;:&quot;4m&quot;},{&quot;name&quot;:&quot;Melodies 4&quot;,&quot;path&quot;:&quot;simplesession/Melodies4&quot;,&quot;length&quot;:&quot;4m&quot;}]}]}"
+         data-tip="devicemute"
+         data-tips="{&quot;playstop&quot;:{&quot;@text&quot;:&quot;Click this button to start and stop playback.&quot;},&quot;createdeletenotes&quot;:{&quot;@text&quot;:&quot;Click in the grid to create a note. Click an existing note to delete it.&quot;},&quot;tempo&quot;:{&quot;@text&quot;:&quot;Drag the slider to change the tempo.&quot;},&quot;overview&quot;:{&quot;@text&quot;:&quot;Click to focus on a single bar. Click again to see the whole pattern.&quot;},&quot;record&quot;:{&quot;@text&quot;:&quot;Click to start and stop real-time recording. When active, you can record what you play on the pads.&quot;},&quot;dragnotes&quot;:{&quot;@text&quot;:&quot;You can move notes around the grid by clicking and dragging them.&quot;},&quot;resizenotes&quot;:{&quot;@text&quot;:&quot;You can lengthen or shorten notes by dragging on their right edge.&quot;},&quot;selectnotes&quot;:{&quot;@text&quot;:&quot;Click and drag around multiple notes to select them. You can then move them together.&quot;},&quot;export&quot;:{&quot;@text&quot;:&quot;If you make patterns you like, you can export and open them in Ableton Live.&quot;},&quot;keyboard&quot;:{&quot;@text&quot;:&quot;Click here to play these sounds using your keyboard keys.&quot;},&quot;drumpad&quot;:{&quot;@text&quot;:&quot;Click on the pads to play a sound.&quot;},&quot;lowhighpitch&quot;:{&quot;@text&quot;:&quot;Click and drag. Lower pitches are to the left, higher pitches to the right.&quot;},&quot;songformsections&quot;:{&quot;@text&quot;:&quot;Click on the blocks to jump to a particular section of the song.&quot;},&quot;devicemute&quot;:{&quot;@text&quot;:&quot;If you do not hear any sound, check that your device is not muted and that the volume is turned up.&quot;},&quot;exportnotsupportedchromeios&quot;:{&quot;@text&quot;:&quot;Exporting to Live is not available from this browser. Please use Safari if you’d like to export your music from an iOS device.&quot;,&quot;showalways&quot;:true}}"
+         data-lang="{&quot;@reset&quot;:&quot;Reset&quot;,&quot;@clear&quot;:&quot;Clear&quot;,&quot;@exporttolive&quot;:&quot;Export to Live&quot;,&quot;@exporting&quot;:&quot;Exporting&quot;,&quot;@tempo&quot;:&quot;Tempo&quot;,&quot;@keyboard&quot;:&quot;Keyboard&quot;,&quot;@on&quot;:&quot;On&quot;,&quot;@off&quot;:&quot;Off&quot;,&quot;@close&quot;:&quot;Close&quot;,&quot;@lowpitch&quot;:&quot;Low Pitch&quot;,&quot;@highpitch&quot;:&quot;High Pitch&quot;,&quot;@fillinsolution&quot;:&quot;Fill in solution&quot;,&quot;@incompatiblebrowser&quot;:&quot;Your browser can’t display the interactive musical examples on this page.&lt;br&gt;Please use a browser that supports Web Audio such as Chrome, Safari, Firefox, or Edge.&quot;}">
+      <div id="_getstartedcombining1loader" class="">
+        <div class="widget-loader__loading-animation" style="display: none;"></div>
+      </div>
+      <div style="position: relative;">
+        <div>
+          <div class="widget-session__wrapper">
+            <div class="widget-session__track theme-a">Drums
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--playing "></button>
+            </div>
+            <div class="widget-session__track theme-d">Bass
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--playing "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+            </div>
+            <div class="widget-session__track theme-c">Chords
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--playing "></button>
+            </div>
+            <div class="widget-session__track theme-e">Melodies
+              <button class="btn widget-session__pad  widget-session__pad--playing "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+              <button class="btn widget-session__pad  widget-session__pad--stopped "></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<script src="./Get started _ Learning Music (Beta)_files/SimpleSession.js.descarga"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var widgets = document.getElementsByClassName("session");
+    Array.from(widgets).forEach(function (e) {
+      window[e.id] = new SimpleSession();
+      window[e.id].init({
+        widgetId: e.id,
+        preset: JSON.parse(e.getAttribute('data-preset')),
+        tips: JSON.parse(e.getAttribute('data-tips')),
+        tip: e.getAttribute('data-tip'),
+        lang: JSON.parse(e.getAttribute('data-lang'))
+      })
+    })
+
+  });
+</script>
+
+
+</body>
+</html>
