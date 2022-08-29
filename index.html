@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoccccdePen - MediaPipe - Hands</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+
+
+  //****************TONE
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
+  <script src="https://unpkg.com/tone@14.7.58/build/Tone.js"></script>
+
+  <!--  <script src="padSampler.js"></script>-->
+
+  //*****************tone
+
+
+  <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.css"
+        crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="demo.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.js"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<!-- partial:index.partial.html -->
+<body>
+<style>
+  .square-box {
+    width: 33%;
+    height: 0;
+    padding-top: 33%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+
+  .landmark-grid-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #99999999;
+  }
+</style>
+
+<div class='music_canvas'>
+  <!--  <div class="childhood">hola</div>-->
+  <div class="childhood">
+    <div>
+      <div class="widget-session__wrapper ul">
+        <div class="widget-session__track theme-a">Drums
+          <button id="D1"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect drum_pad"></button>
+          <button id="D2"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect drum_pad"></button>
+          <button id="D3"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect drum_pad"></button>
+          <button id="D4"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect drum_pad"></button>
+        </div>
+        <div class="widget-session__track theme-d">Bass
+          <button id="B1"
+                  class=" btn widget-session__pad  widget-session__pad--stopped pad_glow_effect bass_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect bass_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect bass_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect bass_pad"></button>
+        </div>
+        <div class="widget-session__track theme-c">Chords
+          <button id="C1"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect chord_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect chord_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect chord_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect chord_pad"></button>
+        </div>
+        <div class="widget-session__track theme-e">Melodies
+          <button id="M1"
+                  class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect melodie_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect melodie_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect melodie_pad"></button>
+          <button class="btn widget-session__pad  widget-session__pad--stopped pad_glow_effect melodie_pad"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+  <video class="input_video"></video>
+<!--  <canvas class="output_canvas2" width="1280px" height="720px"></canvas>-->
+  <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+  <div class="loading">
+    <div class="spinner"></div>
+    <div class="message">
+      Loading
+    </div>
+  </div>
+  <a class="abs logo" href="http://www.mediapipe.dev" target="_blank">
+    <div style="display: flex;align-items: center;bottom: 0;right: 10px;">
+      <img class="logo" src="logo_white.png" alt="" style="
+          height: 50px;">
+      <!--        <span class="title">MediaPipe</span>-->
+      <!--      <button class="logo">Play</button>-->
+    </div>
+  </a>
+  <div class="shoutout">
+    <!--    <div>-->
+    <!--      <a href="https://solutions.mediapipe.dev/pose">-->
+    <!--        Click here for more info-->
+    <!--      </a>-->
+    <!--    </div>-->
+  </div>
+</div>
+<div class="control-panel" style="display: none">
+</div>
+<div class="pos-text">
+  <div id="xpos-text" class="pos-text-content">x:</div>
+  <!--  <div id="ypos-text" class="pos-text-content">y:</div>-->
+  <!--  <div id="zpos-text" class="pos-text-content">z:</div>-->
+</div>
+<!--<div class="light" id="is-inside">undefined</div>-->
+
+<div class='square-box' style="display: none">
+  <div class="landmark-grid-container">
+  </div>
+</div>
+
+
+<!-- partial -->
+
+<script type="module" src="js/script.js"></script>
+
+</body>
+</html>
